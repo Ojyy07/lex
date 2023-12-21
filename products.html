@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Products Hotel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .mytitle {
+        font-family: "PT Sans", sans-serif;
+        width: 100%;
+        height: 250px;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("https://kaltimtoday.co/wp-content/uploads/2021/05/Hotel-Ibis-Samarinda.png");
+        background-position: center;
+        background-size: cover;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mytitle > button {
+        width: 200px;
+        height: 50px;
+        background-color: transparent;
+        color: white;
+        border-radius: 50px;
+        border: 1px solid white;
+        margin-top: 10px;
+      }
+
+      .mytitle > button:hover {
+        border: 2px solid white;
+      }
+
+      .mycards {
+        margin: 20px auto 0px auto;
+        width: 95%;
+        max-width: 1200px;
+      }
+
+      .mycomment {
+        color: gray;
+      }
+
+      .mypost {
+        width: 95%;
+        max-width: 500px;
+        margin: 20px auto 0px auto;
+        padding: 20px;
+        box-shadow: 0px 0px 3px 0px gray;
+        display: none;
+      }
+
+      .mybtns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .mybtns > button {
+        margin-right: 10px;
+      }
+    </style>
+    <script>
+      function open_box() {
+        $("#post-box").show();
+      }
+      function close_box() {
+        $("#post-box").hide();
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="mytitle">
+      <h1>Pilihan Hotel</h1>
+      <button onclick="open_box()">Book</button>
+    </div>
+
+    <div class="mypost" id="post-box">
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="Enter Movie URL"
+        />
+        <label for="floatingInput">Nama Hotel</label>
+      </div>
+      <div class="input-group mb-3"></div>
+      <div class="form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="floatingTextarea"
+        ></textarea>
+        <label for="floatingTextarea">Tanggal Pemesanan</label>
+      </div>
+      <div class="mybtns">
+        <button type="button" class="btn btn-dark">Save</button>
+        <button
+          onclick="close_box()"
+          type="button"
+          class="btn btn-outline-dark"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <div class="mycards">
+      <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://blog.sisapp.com/wp-content/uploads/2021/08/Kelebihan-Dan-Kekurangan-Bisnis-Property-Hotel.jpg"
+              style="height: 250px"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">L Hotel</h5>
+              <div>Fasilitas Utama</div>
+              <div>☑️AC</div>
+              <div>☑️Restoran</div>
+              <div>☑️Resepsionis 24 Jam</div>
+              <div>☑️Parkir</div>
+              <div>
+                📍Jalan Sumatera No. 51, Jakarta Wetan, 40014 Jakarta, Indonesia
+              </div>
+              <p>⭐⭐⭐⭐⭐</p>
+              <p class="mycomment"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/t_htl-dskt/tix-hotel/images-web/2023/04/07/0ecdf844-9e09-4f62-8df0-1d44ab7f3f20-1680864023210-10692aaf9370dc8d0b21afab6f78ed89.jpg"
+              style="height: 250px"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Grand Flora Hotel</h5>
+              <div>Fasilitas Utama</div>
+              <div>☑️AC</div>
+              <div>☑️Restoran</div>
+              <div>☑️Resepsionis 24 Jam</div>
+              <div>☑️Parkir</div>
+              <div>
+                📍Jalan Pasirkaliki No.16-18 Jalan Stasiun Barat
+                No.25-26, 40181 Palembang,
+              </div>
+              <p>⭐⭐⭐⭐</p>
+              <p class="mycomment"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10001439-804369ba2f0df41b23c895d0f1501677.png?_src=imagekit&tr=c-at_max,h-280,q-40,w-740"
+              style="height: 250px"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Hotel Santika</h5>
+              <div>Fasilitas Utama</div>
+              <div>☑️AC</div>
+              <div>☑️Restoran</div>
+              <div>☑️Resepsionis 24 Jam</div>
+              <div>☑️Parkir</div>
+              <div>📍Jalan Cihampelas no 211-217, 40131 Bekasi, Indonesia</div>
+              <p>⭐⭐⭐⭐</p>
+              <p class="mycomment"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://awsimages.detik.net.id/community/media/visual/2023/07/31/hotel-merdeka-bekasi-7_169.jpeg?w=600&q=90"
+              style="height: 250px"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Hotel Merdeka</h5>
+              <div>Fasilitas Utama</div>
+              <div>☑️AC</div>
+              <div>☑️Restoran</div>
+              <div>☑️Resepsionis 24 Jam</div>
+              <div>☑️Parkir</div>
+              <div>
+                📍Jl. Asia Afrika No. 81, 40111 Semarang, Indonesia
+              </div>
+              <p>⭐⭐⭐⭐⭐</p>
+              <p class="mycomment"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center mt-5">
+      <a href="index.html" type="button" class="btn btn-danger py-0 px-4">
+        <h2>Back</h2>
+      </a>
+    </div>
+    <br />
+  </body>
+</html>
